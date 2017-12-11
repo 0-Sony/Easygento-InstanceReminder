@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * This file is part of Easygento_InstanceReminder for Magento.
+ *
+ * @license http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author Phuong LE <sony@menincode.com> <@>
+ * @category Easygento
+ * @package Easygento_InstanceReminder
+ * @copyright Copyright (c) 2017 Easygento (Menincode)
+ */
+-->
+<config>
+    <modules>
+        <Easygento_InstanceReminder>
+            <version>1.0.0</version>
+        </Easygento_InstanceReminder>
+    </modules>
+    <global>
+        <models>
+            <easygento_instancereminder>
+                <class>Easygento_InstanceReminder_Model</class>
+            </easygento_instancereminder>
+        </models>
+        <helpers>
+            <easygento_instancereminder>
+                <class>Easygento_InstanceReminder_Helper</class>
+            </easygento_instancereminder>
+        </helpers>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <easygento_instancereminder module="Easygento_InstanceReminder">
+                    <file>easygento/instancereminder.xml</file>
+                </easygento_instancereminder>
+            </updates>
+        </layout>
+    </adminhtml>
+    <default>
+        <easygento_instancereminder>
+            <instance_reminder>
+                <dev>FFFFFF</dev>
+                <preprod>FFFFFF</preprod>
+                <production>FFFFFF</production>
+            </instance_reminder>
+        </easygento_instancereminder>
+    </default>
+</config>
