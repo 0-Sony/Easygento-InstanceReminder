@@ -14,6 +14,7 @@ There are 3 instances by default :
 <li> production </li>
 </ul>
 
-But feel free to set your own instance names using your model.
+But feel free to set your own instance names using your model,
+and adapt the helper.
 
 
