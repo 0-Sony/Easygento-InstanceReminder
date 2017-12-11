@@ -14,6 +14,9 @@
 $_helper = Mage::helper('easygento_instancereminder');
 ?>
 <?php if ($_helper->isEnabled()) : ?>
+    <?php if ($_helper->isAdminLoginPage()): ?>
+        <link type="text/css" rel="stylesheet" href="<?php echo $this->getSkinUrl('easygento/instancereminder/topbar.css') ?>" media="all"/>
+    <?php endif; ?>
     <style>
         #easygento_ir {
             background: <?php echo $_helper->getColorByInstance() ?>;

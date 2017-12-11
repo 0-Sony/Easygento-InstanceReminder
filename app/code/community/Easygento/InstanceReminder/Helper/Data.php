@@ -18,9 +18,10 @@ class Easygento_InstanceReminder_Helper_Data extends Mage_Core_Helper_Abstract
 
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_ENABLED = 'easygento_instancereminder/instance_reminder/enabled';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_INSTANCE = 'easygento_instancereminder/instance_reminder/instance';
-    const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_DEV = 'easygento_instancereminder/instance_reminder/dev';
+    const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_DEVELOP = 'easygento_instancereminder/instance_reminder/dev';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PREPROD = 'easygento_instancereminder/instance_reminder/preprod';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PRODUCTION = 'easygento_instancereminder/instance_reminder/production';
+
 // Easygento Tag NEW_CONST
 
 // Easygento Tag NEW_VAR
@@ -48,15 +49,19 @@ class Easygento_InstanceReminder_Helper_Data extends Mage_Core_Helper_Abstract
     {
         $instance = $this->getInstance();
         switch ($instance) {
-            case 'develop':
-                return '#' . Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_DEV);
-            case 'preprod':
-                return '#' . Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PREPROD);
-            case 'production':
-                return '#' . Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PRODUCTION);
+            case $instance:
+                return '#' . Mage::getStoreConfig(constant('self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_'.strtoupper($instance)));
         }
-
     }
+
+    /**
+     * @return bool
+     */
+    public function isAdminLoginPage()
+    {
+        return Mage::registry('easygento_ir') ? true : false;
+    }
+
 // Easygento Tag NEW_METHOD
 
 }
