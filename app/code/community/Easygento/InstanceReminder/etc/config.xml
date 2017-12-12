@@ -40,6 +40,8 @@
     <default>
         <easygento_instancereminder>
             <instance_reminder>
+                <enabled>1</enabled>
+                <instance>develop</instance>
                 <dev>FFFFFF</dev>
                 <preprod>FFFFFF</preprod>
                 <production>FFFFFF</production>
