@@ -3,7 +3,7 @@ app/etc/modules/Easygento_InstanceReminder.xml app/etc/modules/Easygento_Instanc
 app/code/community/Easygento/InstanceReminder app/code/community/Easygento/InstanceReminder
 app/design/adminhtml/default/default/layout/easygento/instancereminder.xml app/design/adminhtml/default/default/layout/easygento/instancereminder.xml
 app/design/adminhtml/default/default/template/easygento/instancereminder app/design/adminhtml/default/default/template/easygento/instancereminder
-app/skin/adminhtml/default/default/easygento/instancereminder app/skin/adminhtml/default/default/easygento/instancereminder
-app/skin/adminhtml/default/default/images/easygento app/skin/adminhtml/default/default/images/easygento
-app/js/easygento/instancereminder app/js/easygento/instancereminder
+skin/adminhtml/default/default/easygento/instancereminder skin/adminhtml/default/default/easygento/instancereminder
+skin/adminhtml/default/default/images/easygento skin/adminhtml/default/default/images/easygento
+js/easygento/instancereminder js/easygento/instancereminder
 
