@@ -36,6 +36,16 @@
                 </easygento_instancereminder>
             </updates>
         </layout>
+        <events>
+            <controller_action_predispatch_adminhtml_index_login>
+                <observers>
+                    <easygento_instancereminder>
+                        <class>easygento_instancereminder/observer</class>
+                        <method>setFlag</method>
+                    </easygento_instancereminder>
+                </observers>
+            </controller_action_predispatch_adminhtml_index_login>
+        </events>
     </adminhtml>
     <default>
         <easygento_instancereminder>
