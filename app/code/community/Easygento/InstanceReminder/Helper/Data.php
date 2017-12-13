@@ -31,11 +31,11 @@ class Easygento_InstanceReminder_Helper_Data extends Mage_Core_Helper_Abstract
      */
     public function isEnabled()
     {
-        return Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_ENABLED);
+        return Mage::getStoreConfigFlag(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_ENABLED);
     }
 
     /**
-     * @return int
+     * @return mixed
      */
     public function getInstance()
     {
