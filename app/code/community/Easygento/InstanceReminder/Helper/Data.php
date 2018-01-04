@@ -18,9 +18,11 @@ class Easygento_InstanceReminder_Helper_Data extends Mage_Core_Helper_Abstract
 
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_ENABLED = 'easygento_instancereminder/instance_reminder/enabled';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_INSTANCE = 'easygento_instancereminder/instance_reminder/instance';
+    const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_CUSTOM_INSTANCE = 'easygento_instancereminder/instance_reminder/custom_instance';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_DEVELOP = 'easygento_instancereminder/instance_reminder/dev';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PREPROD = 'easygento_instancereminder/instance_reminder/preprod';
     const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_PRODUCTION = 'easygento_instancereminder/instance_reminder/production';
+    const XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_CUSTOM = 'easygento_instancereminder/instance_reminder/custom';
 
 // Easygento Tag NEW_CONST
 
@@ -45,13 +47,22 @@ class Easygento_InstanceReminder_Helper_Data extends Mage_Core_Helper_Abstract
     /**
      * @return mixed
      */
+    public function getInstanceName()
+    {
+        if (Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_INSTANCE) == 'custom') {
+            return Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_CUSTOM_INSTANCE);
+        }
+        return Mage::getStoreConfig(self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_INSTANCE);
+
+    }
+
+    /**
+     * @return mixed
+     */
     public function getColorByInstance()
     {
         $instance = $this->getInstance();
-        switch ($instance) {
-            case $instance:
-                return '#' . Mage::getStoreConfig(constant('self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_'.strtoupper($instance)));
-        }
+        return '#' . Mage::getStoreConfig(constant('self::XML_PATH_EASYGENTO_INSTANCEREMINDER_INSTANCE_REMINDER_' . strtoupper($instance)));
     }
 
     /**

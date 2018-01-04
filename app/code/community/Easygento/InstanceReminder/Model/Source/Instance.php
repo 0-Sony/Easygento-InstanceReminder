@@ -31,22 +31,10 @@ class Easygento_InstanceReminder_Model_Source_Instance
             array('value' => 'develop', 'label'=> Mage::helper('easygento_instancereminder')->__('Develop')),
             array('value' => 'preprod', 'label'=> Mage::helper('easygento_instancereminder')->__('Preprod')),
             array('value' => 'production', 'label'=> Mage::helper('easygento_instancereminder')->__('Production')),
+            array('value' => 'custom', 'label'=> Mage::helper('easygento_instancereminder')->__('Custom'))
         );
     }
 
-    /**
-     * Get options in "key-value" format
-     *
-     * @return array
-     */
-    public function toArray()
-    {
-        return array(
-            'develop' => Mage::helper('easygento_instancereminder')->__('Develop'),
-            'preprod' => Mage::helper('easygento_instancereminder')->__('Preprod'),
-            'production' => Mage::helper('easygento_instancereminder')->__('Production'),
-        );
-    }
 // Easygento Tag NEW_METHOD
 
 }

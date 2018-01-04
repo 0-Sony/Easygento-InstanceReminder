@@ -57,6 +57,18 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </instance>
+                        <custom_instance translate="label" module="easygento_instancereminder">
+                            <label>Custom Instance</label>
+                            <frontend_type>text</frontend_type>
+                            <depends>
+                                <enabled>1</enabled>
+                                <instance>custom</instance>
+                            </depends>
+                            <sort_order>25</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom_instance>
                         <dev translate="label" module="easygento_instancereminder">
                             <label>Development Reminder Color</label>
                             <frontend_type>text</frontend_type>
@@ -96,6 +108,19 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </production>
+                        <custom translate="label" module="easygento_instancereminder">
+                            <label>Custom Reminder Color</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>color</validate>
+                            <depends>
+                                <instance>custom</instance>
+                                <enabled>1</enabled>
+                            </depends>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </custom>
                     </fields>
                 </instance_reminder>
             </groups>

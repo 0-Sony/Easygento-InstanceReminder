@@ -13,7 +13,7 @@
 <config>
     <modules>
         <Easygento_InstanceReminder>
-            <version>1.0.1</version>
+            <version>1.1.0</version>
         </Easygento_InstanceReminder>
     </modules>
     <global>
@@ -55,6 +55,7 @@
                 <dev>FFFFFF</dev>
                 <preprod>FFFFFF</preprod>
                 <production>FFFFFF</production>
+                <custom>FFFFFF</custom>
             </instance_reminder>
         </easygento_instancereminder>
     </default>
